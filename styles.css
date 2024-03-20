@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #572106, #de7c4c); 
+}
+h1 {
+    text-align: center;
+}
+button {
+    margin: 5px;
+    display: inline-block; 
+}
+#moveButton {
+    position: absolute; 
+}
+img {
+    width: 200px;
+    height: auto; 
+}
