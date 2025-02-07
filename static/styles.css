@@ -8,19 +8,83 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(to bottom right, #572106, #de7c4c); 
-}
-h1 {
+    background: linear-gradient(to bottom right, #ca8e1d, #eb9147); 
     text-align: center;
 }
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
 button {
-    margin: 5px;
-    display: inline-block; 
+    font-size: 20px; /* Increase button size */
+    padding: 50px 70px; /* Make it larger */
+    margin: 10px;
+    border-radius: 30px; /* Rounded corners */
+    border: none;
+    cursor: pointer;
 }
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between buttons */
+    margin-top: 20px;
+}
+
 #moveButton {
-    position: absolute; 
+    position: absolute; /* Required for dynamic movement */
+    left: 50%; /* Start at the center horizontally */
+    transform: translateX(100%); /* Move it to the right of the "Yes" button */
 }
+
+/* Shared image styling for both pages */
 img {
-    width: 200px;
+    width: 400px;
     height: auto; 
+}
+
+/* Starting Page */
+#container > img {
+    margin-bottom: 20px;
+}
+
+/* Date Page Adjustments */
+#cute-pic {
+    width: 250px; /* Smaller image for date page */
+    margin-bottom: 20px;
+}
+
+/* Date options section */
+#date-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#date-options button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#date-options img {
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.2s;
+}
+
+#date-options img:hover {
+    transform: scale(2.1);
+}
+
+#date-options p {
+    font-size: 22px;
+    margin-top: 0px;
+    font-weight: bold;
 }

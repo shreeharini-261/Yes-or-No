@@ -8,16 +8,16 @@
 </head>
 <body>
     <div id="container">
-        <img src="{{ url_for('static', filename='pic.jpg') }}" alt="Cute Picture">
-  
-        <div id="content">
-            <h1>Will you go on a date with me?</h1>
-            <button id="moveButton">NO</button>
-            <br>
-            <br>
+        <img src="{{ url_for('static', filename='pic.png') }}" alt="Cute Picture">
+
+        <h1>Hey Cutie! Will you be my Valentine?</h1>
+
+        <div id="button-container">
             <button id="yesButton" onclick="handleYes()">Yes</button>
+            <button id="moveButton">NO</button>
         </div>
     </div>
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

@@ -29,5 +29,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 function handleYes() {
-    alert("Then what you waiting for plan it BHAKA!!<3");
+    window.location.href = "/date";
 }

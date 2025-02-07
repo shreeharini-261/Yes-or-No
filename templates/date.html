@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Date Spot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="container">
+        <!-- Cute Picture Above Question -->
+        <img id="cute-pic" src="{{ url_for('static', filename='pic.png') }}" alt="Cute Pic">
+        
+        <h1>Where should we go for our date?</h1>
+
+        <div id="date-options">
+            <div class="option">
+                <button onclick="chooseOption('Movie')">
+                    <img src="{{ url_for('static', filename='movie.png') }}" alt="Movie">
+                </button>
+                <p>Movie</p>
+            </div>
+            <div class="option">
+                <button onclick="chooseOption('Cafe')">
+                    <img src="{{ url_for('static', filename='cafe.png') }}" alt="Cafe">
+                </button>
+                <p>Cafe</p>
+            </div>
+            <div class="option">
+                <button onclick="chooseOption('Lake View')">
+                    <img src="{{ url_for('static', filename='lake.png') }}" alt="Lake View">
+                </button>
+                <p>Lake View</p>
+            </div>
+            <div class="option">
+                <button onclick="chooseOption('Painting')">
+                    <img src="{{ url_for('static', filename='painting.png') }}" alt="Painting">
+                </button>
+                <p>Painting</p>
+            </div>
+            <div class="option">
+                <button onclick="chooseOption('Pottery')">
+                    <img src="{{ url_for('static', filename='pottery.png') }}" alt="Pottery">
+                </button>
+                <p>Pottery</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function chooseOption(option) {
+            alert("OKAYYY POOKIEE! We're going to " + option + "!<3");
+            triggerConfetti();
+        }
+
+        function triggerConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 200,
+                origin: { x: 0.5, y: 0.5 },
+            });
+        }
+    </script>
+
+    <!-- Confetti script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
