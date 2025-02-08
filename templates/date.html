@@ -11,7 +11,7 @@
         <!-- Cute Picture Above Question -->
         <img id="cute-pic" src="{{ url_for('static', filename='pic.png') }}" alt="Cute Pic">
         
-        <h1>Where should we go for our date?</h1>
+        <h1>So Kamal...where should we go for our date?</h1>
 
         <div id="date-options">
             <div class="option">
@@ -46,13 +46,25 @@
             </div>
         </div>
     </div>
-
     <script>
         function chooseOption(option) {
+            // Display the alert as before
             alert("OKAYYY POOKIEE! We're going to " + option + "!<3");
+    
+            // Send the selected option to the server using AJAX
+            fetch('/log_option', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ selected_option: option })
+            }).then(response => response.json())
+              .then(data => console.log(data.message));
+    
             triggerConfetti();
+            
         }
-
+    
         function triggerConfetti() {
             confetti({
                 particleCount: 100,
@@ -61,6 +73,8 @@
             });
         }
     </script>
+    
+    
 
     <!-- Confetti script -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
